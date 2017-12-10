@@ -23,17 +23,26 @@ void output(string& sentence);
 int main()
 {
     string s;
+    char ans;
 
-    input(s);
-    substitute(s);
-    output(s);
+    do
+    {
+        input(s);
+        substitute(s);
+        output(s);
+
+        cout<<"Would like to continue (y/n)? ";
+        cin>>ans;
+        cin.ignore(1,'\n');
+        cout<<endl;
+    }while(ans == 'y' || ans == 'Y');
 
     return 0;
 }
 
 void input(string& sentence)
 {
-    cout<<"\nEnter line of text: ";
+    cout<<"Enter line of text: ";
     getline(cin, sentence);
     cout<<endl;
 }
@@ -57,5 +66,5 @@ void substitute(string& sentence)
 
 void output(string& name)
 {
-    cout<<"Your next text: "<<name<<endl<<endl;
+    cout<<"Your new text: "<<name<<endl<<endl;
 }
