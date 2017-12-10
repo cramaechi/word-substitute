@@ -1,4 +1,5 @@
-//Proram replaces all four-letter words in an input with the word "love".
+//A Program that replaces all four-letter words in an input with the word
+//"love".
 #include <iostream>
 #include <string>
 #include <cstring>
